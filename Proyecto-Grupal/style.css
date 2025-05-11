@@ -1,0 +1,133 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "system-ui";
+}
+
+.navbar {
+  background-color: rgb(82, 82, 255);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo a {
+  background-color: rgb(82, 82, 255);
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.nav-link:hover {
+  color: greenyellow;
+}
+
+.hamburguesa {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: white;
+  transition: 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .hamburguesa {
+    display: block;
+  }
+
+  .hamburguesa.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburguesa.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburguesa.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .navbar {
+    justify-content: space-between;
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 60px;
+    gap: 1rem;
+    flex-direction: column;
+    background-color: rgb(82, 82, 255);
+    width: 100%;
+    text-align: center;
+    transition: .3s;
+    padding: 0;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+}
+
+.header-content {
+  position: relative;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10%;
+  height: 100px;
+}
+
+.fondo {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+h1 {
+  font-size: 3rem;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  margin: 0;
+  text-align: center;
+  z-index: 2;
+}
+
+@media (max-width: 600px) {
+  .header-content {
+    min-height: 150px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
