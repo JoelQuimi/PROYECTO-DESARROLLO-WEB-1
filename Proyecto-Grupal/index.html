@@ -4,9 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TiendaOnline</title>
-    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="style.css" />
-    
   </head>
   <body>
     <header>
@@ -20,13 +19,22 @@
           <span class="bar"></span>
         </div>
         <ul class="nav-menu">
-          <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
-          <li class="nav-item"><a href="nosotros.html" class="nav-link">Nosotros</a></li>
-          <li class="nav-item"><a href="producto.html" class="nav-link">Producto</a></li>
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a href="nosotros.html" class="nav-link">Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a href="producto.html" class="nav-link">Producto</a>
+          </li>
+          <li class="nav-item">
+            <a href="blog.html" class="nav-link">Producto</a>
+          </li>
         </ul>
       </nav>
       <div class="header-content">
-        <h1>Producto De Limpieza</h1>
+        <h1 class="fonde-imagen">Producto De Limpieza</h1>
         <img
           class="fondo"
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQM-Xh1-QL5VmjevEY1YooaG-HdTIMKfLNcAw&s"
@@ -34,9 +42,40 @@
         />
       </div>
     </header>
+    <main>
+      <h2>Productos</h2>
+    </main>
+
+    <section>
+      <h2>Contactamos</h2>
+      <form action="">
+        <fieldset>
+          <legend>Informacion</legend>
+          <div>
+            <label for="">Nombre: </label>
+            <input type="text" placeholder="Nombre" />
+          </div>
+          <div>
+            <label for="">Apellido: </label>
+            <input type="text" placeholder="Apellido" />
+          </div>
+          <div>
+            <label for="">Telefono</label>
+            <input type="number" />
+          </div>
+          <div>
+            <label for="">E-mail:</label>
+            <input type="email" placeholder="Email" />
+          </div>
+          <div>
+            <input type="submit" value="Enviar">
+          </div>
+        </fieldset>
+      </form>
+    </section>
 
     <footer class="footer">
-        <p>&copy; 2025 Mi Página Web. Todos los derechos reservados.</p>
+      <p>&copy; 2025 Mi Página Web. Todos los derechos reservados.</p>
     </footer>
 
     <script src="script.js"></script>
