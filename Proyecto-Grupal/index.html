@@ -1,83 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TiendaOnline</title>
-    <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+
     <header>
+
       <nav class="navbar">
+
         <div class="logo">
-          <a href="#">LOGO</a>
+          <a href="">LOGO</a>
         </div>
+
         <div class="hamburguesa">
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
         </div>
+
         <ul class="nav-menu">
           <li class="nav-item">
-            <a href="index.html" class="nav-link">Inicio</a>
+            <a href="" class="nav-link">Inicio</a>
           </li>
           <li class="nav-item">
-            <a href="nosotros.html" class="nav-link">Nosotros</a>
+            <a href="" class="nav-link">Nuestros Productos</a>
           </li>
           <li class="nav-item">
-            <a href="producto.html" class="nav-link">Producto</a>
+            <a href="" class="nav-link">¿Quienes Somos?</a>
           </li>
           <li class="nav-item">
-            <a href="blog.html" class="nav-link">Producto</a>
+            <a href="#contacto" class="nav-link">Cotactanos</a>
           </li>
         </ul>
+
       </nav>
+
       <div class="header-content">
-        <h1 class="fonde-imagen">Producto De Limpieza</h1>
-        <img
-          class="fondo"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQM-Xh1-QL5VmjevEY1YooaG-HdTIMKfLNcAw&s"
-          alt="Limpieza"
-        />
+
+        <h1 class="fonde-imagen">Productos De Limpieza</h1>
+
       </div>
+
     </header>
-    <main>
-      <h2>Productos</h2>
-    </main>
 
     <section>
-      <h2>Contactamos</h2>
+      <h2>Productos</h2>
+    </section>
+
+    <section>
+      <h2>Article "¿Quienes Somos?</h2>
+    </section>
+
+    <section id="contacto">
+
+      <h2>Contactanos</h2>
+
       <form action="">
+
         <fieldset>
+
           <legend>Ingresa Datos</legend>
+
           <div>
             <label for="">Nombre: </label>
             <input type="text" placeholder="Nombre" />
           </div>
+
           <div>
             <label for="">Apellido: </label>
             <input type="text" placeholder="Apellido" />
           </div>
+
           <div>
             <label for="">Telefono</label>
             <input type="number" />
           </div>
+
           <div>
             <label for="">E-mail:</label>
             <input type="email" placeholder="Email" />
           </div>
+
           <div>
-            <input type="submit" value="Enviar">
+            <input class="btn-enviar" type="submit" value="Enviar">
           </div>
+
         </fieldset>
+
       </form>
+
     </section>
 
-    <footer class="footer">
+    <footer>
       <p>&copy; 2025 Mi Página Web. Todos los derechos reservados.</p>
     </footer>
 
     <script src="script.js"></script>
+    
   </body>
 </html>

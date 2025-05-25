@@ -2,14 +2,15 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body {
-  font-family: system-ui;
+:root{
+  --fondo-oscuro: #000000;
 }
 
 .navbar {
-  background-color: rgb(99, 96, 96);
+  background-color: var(--fondo-oscuro);
   padding: 1rem;
   display: flex;
   justify-content: space-between;
@@ -31,6 +32,10 @@ body {
   gap: 2rem;
 }
 
+.nav-item a{
+  font-weight: 600;
+}
+
 .nav-link {
   color: white;
   text-decoration: none;
@@ -38,7 +43,7 @@ body {
 }
 
 .nav-link:hover {
-  color: rgb(202, 198, 198);
+  color: #08b235;
 }
 
 .hamburguesa {
@@ -78,7 +83,7 @@ body {
     left: -100%;
     width: 100%;
     height: calc(100vh - 60px);
-    background-color: rgb(89, 89, 95);
+    background-color: var(--fondo-oscuro);
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -92,27 +97,18 @@ body {
   }
 }
 
-.header-content {
-  position: relative;
-  min-height: 200px;
+.header-content{
+  background: linear-gradient(#00000080, #00000080), url("https://reciclamas.com.mx/wp-content/uploads/2024/03/2.jpg") center / cover;;
+  height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10%;
-  height: 100px;
-  z-index: 1;
 }
 
 .fondo {
-  position: absolute;
   width: 100%;
   height: 100%;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 0;
   object-fit: cover;
-  z-index: 0;
 }
 
 .fonde-imagen {
@@ -123,30 +119,11 @@ body {
   text-align: center;
   z-index: 2;
 }
+
 h2{
   font-size: 3rem;
   text-align: center;
 }
-
-@media (max-width: 600px) {
-  .header-content {
-    min-height: 150px;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-}
-
-.footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  width: 100%;
-}
-
-
 
 section {
   max-width: 600px;
@@ -214,13 +191,30 @@ input::placeholder {
 }
 
 /* Quitar flechas de inputs numéricos */
-input[type="number"] {
-  -moz-appearance: textfield;
-}
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.btn-enviar{
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.btn-enviar:hover{
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+footer p{
+  background-color: var(--fondo-oscuro);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+  font-weight: 600;
+  font-size: .8rem;
 }
 
 @media (max-width: 480px) {
