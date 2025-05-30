@@ -7,7 +7,25 @@
 
 :root{
   --fondo-oscuro: #000000;
+  --color-verde: #08b235;
 }
+
+body{
+  background-color: var(--fondo-oscuro);
+}
+
+/* Diseños globales */
+
+h2{
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+li{
+  color: white;
+}
+
+/* estilos del header, navbar*/
 
 .navbar {
   background-color: var(--fondo-oscuro);
@@ -43,7 +61,7 @@
 }
 
 .nav-link:hover {
-  color: #08b235;
+  color: var(--color-verde);
 }
 
 .hamburguesa {
@@ -60,55 +78,12 @@
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-@media (max-width: 768px) {
-  .hamburguesa {
-    display: block;
-  }
-
-  .hamburguesa.active .bar:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hamburguesa.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-
-  .hamburguesa.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
-
-  .nav-menu {
-    position: fixed;
-    top: 60px;
-    left: -100%;
-    width: 100%;
-    height: calc(100vh - 60px);
-    background-color: var(--fondo-oscuro);
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    transition: left 0.3s ease;
-    z-index: 999;
-  }
-
-  .nav-menu.active {
-    left: 0;
-  }
-}
-
 .header-content{
   background: linear-gradient(#00000080, #00000080), url("https://reciclamas.com.mx/wp-content/uploads/2024/03/2.jpg") center / cover;;
   height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.fondo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .fonde-imagen {
@@ -120,53 +95,49 @@
   z-index: 2;
 }
 
-h2{
-  font-size: 3rem;
-  text-align: center;
-}
+/* Sección de Bienvenidos*/
 
-section {
-  max-width: 600px;
+.info-tienda {
+  max-width: 1400px;
   margin: 50px auto;
   padding: 20px;
-  background-color: #f9f9f9;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  font-family: Arial, sans-serif;
 }
 
-h2 {
-  text-align: center;
-  color: #333;
-  margin-bottom: 20px;
-  font-size: 24px;
+.articulo h2{
+  color: var(--color-verde);
+  font-size: 3rem;
 }
 
-/* Estilos específicos para la sección de productos */
+.articulo p{
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 1.2em;
+}
+
+/* Seccion de Productos */
+
 .productos-section {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 50px auto;
   padding: 40px 20px;
-  background-color: #f9f9f9;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  background-color: var(--fondo-oscuro);
 }
 
 .productos-section h2 {
-  color: #333;
-  margin-bottom: 40px;
-  font-size: 2.5rem;
+  color: var(--color-verde);
+  font-size: 3rem;
 }
 
 .productos-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 30px;
-  margin-top: 30px;
+  padding-top: 30px;
 }
 
 .producto-card {
-  background: white;
+  background: #eeeeee;
   border-radius: 15px;
   padding: 20px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -183,7 +154,6 @@ h2 {
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, #08b235, #00cc66);
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }
@@ -194,8 +164,9 @@ h2 {
 
 .producto-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-  border-color: #08b235;
+  box-shadow: 0 15px 30px var(--color-verde);
+  border-color: var(--color-verde);
+  cursor: pointer;
 }
 
 .producto-imagen {
@@ -232,32 +203,32 @@ h2 {
 }
 
 .producto-info h3 {
-  font-size: 1.4rem;
-  color: #333;
+  font-size: 1.8rem;
+  color: black;
   margin-bottom: 10px;
   font-weight: 700;
 }
 
 .producto-info p {
-  color: #666;
+  color: #767575;
   line-height: 1.6;
   margin-bottom: 15px;
-  font-size: 0.95rem;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 .producto-precio {
-  font-size: 1.8rem;
-  font-weight: bold;
+  font-size: 3.5rem;
+  font-weight: 700;
   color: #08b235;
-  margin-bottom: 15px;
 }
 
 .producto-precio .precio-anterior {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: #999;
   text-decoration: line-through;
-  margin-left: 10px;
-  font-weight: normal;
+  padding-left: 10px;
+  font-weight: 600;
 }
 
 .producto-caracteristicas {
@@ -267,10 +238,11 @@ h2 {
 
 .producto-caracteristicas li {
   padding: 5px 0;
-  color: #555;
+  color: #838383;
   position: relative;
   padding-left: 20px;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
 .producto-caracteristicas li::before {
@@ -288,33 +260,64 @@ h2 {
   background: linear-gradient(45deg, #08b235, #00cc66);
   color: white;
   border-radius: 8px;
-  font-weight: 600;
-  font-size: 0.9rem;
+  font-weight: 700;
+  font-size: 1.2rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
-/* Responsive para productos */
-@media (max-width: 768px) {
-  .productos-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .productos-section {
-    margin: 30px 15px;
-    padding: 20px 15px;
-  }
-
-  .productos-section h2 {
-    font-size: 2rem;
-  }
+/* Seccion Quienes Somos */
+main{
+  height: 100vh;
+  position: relative;
 }
 
+.container{
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.container h2{
+  font-size: 3rem;
+  color: var(--color-verde);
+}
+
+.container p{
+  color: white;
+  font-weight: 500;
+  font-size: 1.2em;
+}
+
+.history h3{
+  padding: 1.5rem 0;
+  font-size: 2.5rem;
+  color: var(--color-verde);
+}
+
+.timeline ul{
+  padding: 0 3rem;
+}
+
+.timeline ul li{
+  font-size: 1.2rem;
+}
+
+/* Seccion Contacto*/
+.form-contacto{
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.form-contacto h2{
+  font-size: 3rem;
+  color: var(--color-verde);
+}
 
 form {
   display: flex;
   flex-direction: column;
+  padding: 2rem;
 }
 
 fieldset {
@@ -325,8 +328,9 @@ fieldset {
 }
 
 legend {
+  font-size: 1.5rem;
   font-weight: bold;
-  color: #555;
+  color: white;
   padding: 0 10px;
 }
 
@@ -338,13 +342,14 @@ div {
 }
 
 label {
-  color: #444;
-  font-size: 14px;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 input {
-  padding: 10px;
-  font-size: 14px;
+  padding: 10px 20px;
+  font-size: 18px;
   border: 1px solid #ddd;
   border-radius: 5px;
   transition: border-color 0.3s ease;
@@ -368,37 +373,142 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .btn-enviar{
-  font-weight: 600;
-  font-size: 1.2rem;
+  border: none;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: white;
+  background-color: var(--color-verde);
 }
 
 .btn-enviar:hover{
-  background-color: rgb(255, 255, 255);
+  background-color: #026208;
   cursor: pointer;
 }
 
+footer{
+  width: 100%;
+  padding: 1rem;
+}
+
 footer p{
-  background-color: var(--fondo-oscuro);
   color: white;
   text-align: center;
-  padding: 1rem;
-  width: 100%;
   font-weight: 600;
   font-size: .8rem;
 }
 
-@media (max-width: 480px) {
-  section {
-    margin: 20px;
-    padding: 15px;
+@media (max-width: 768px) {
+
+  /* estilos del header, navbar*/
+  .hamburguesa {
+    display: block;
   }
 
-  h2 {
-    font-size: 20px;
+  .hamburguesa.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburguesa.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburguesa.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 60px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 60px);
+    background-color: var(--fondo-oscuro);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    transition: left 0.3s ease;
+    z-index: 999;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  /* Seccion de bienvenidos responsive*/
+
+  .articulo h2{
+    color: var(--color-verde);
+    font-size: 2rem;
+  }
+
+  .articulo p{
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 1em;
+  }
+
+  /* Responsive para productos */
+  .productos-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .productos-section h2 {
+    font-size: 2rem;
+  }
+
+  .producto-info h3{
+    font-size: 1.5rem;
+  }
+
+  .producto-precio{
+    font-size: 2.5rem;
+  }
+
+  .producto-caracteristicas li{
+    font-size: 1rem;
+  }
+
+  /* Responsive Quienes somos */
+  .container h2{
+    font-size: 2rem;
+  }
+
+  .container p{
+    font-size: 1rem;
+  }
+
+  .history h3{
+    font-size: 2rem;
+  }
+
+  .timeline ul li{
+    font-size: 1rem;
+  }
+
+  /* Responsive para contacto */
+
+  .form-contacto h2{
+    font-size: 2rem;
+  }
+
+  label {
+    font-size: 15px;
   }
 
   input {
-    font-size: 12px;
-    padding: 8px;
+    padding: 10px 20px;
+    font-size: 15px;
+  }
+  .btn-enviar{
+    font-size: 1.2rem;
   }
 }
+
+
+
+
+
+
+
